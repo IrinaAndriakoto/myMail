@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Répondre à l'e-mail</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+  
+</head>
+<body>
+    <h1>Répondre à l'e-mail</h1>
+    <h2>{{ email[1] }}</h2>
+    <form action="/envoyer_reponse/{{ email[0] }}" method="post">
+        <h6>Si vous repondez a cet email , l'utilisateur sera informé que vous avez lu son message</h6>
+        <label for="reponse">Réponse:</label><br>
+        <textarea id="reponse" name="reponse" rows="5" cols="50"></textarea>
+        <input type="hidden" name="email_id" value="{{ email[0] }}">
+        <input type="submit" value="Envoyer">
+    </form>
+    <a href="{{ url_for('boite_de_reception') }}">Retour</a>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+  
+</head>
+<body>
+    <h1>Your Chat</h1>
+    <h2>Guest :</h2>
+    <h3>{{ email[1] }}</h3>
+    <h2>You: </h2>
+    <h3>   {% for reponse in reponse %}
+                <p>{{ reponse[2] }}</p>
+            {% endfor %}
+    </h3>
+    
+     <form action="/envoyer_reponse/{{ email[0] }}" method="POST">
+        <textarea id="reponse" name="reponse" rows="5" cols="50"></textarea>
+        <input type="hidden" name="email_id" value="{{ email[0] }}">
+        <input type="submit" value="Envoyer">
+     </form>
+
+    
+    <a href="{{ url_for('boite_de_reception') }}">Retourner a la page d'accueil</a>
+</body>
+</html> 

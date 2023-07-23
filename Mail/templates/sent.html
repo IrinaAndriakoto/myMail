@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Message envoyés</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+  
+</head>
+<body>
+    <h1>Vos Messages :</h1>
+    <ul>
+        {% for message in messages %}
+            <li>
+                <h5>Envoyé le : {{ message[3] }} </h5>
+                <h3>Destinataire : {{ message[1] }} </h3>
+                <h4> Vous : {{ message[2] }} </h4>
+            </li>
+        {% endfor %}
+    </ul>
+    
+    <a href="{{ url_for('boite_de_reception') }}">Retourner a la boite de reception</a>
+</body>
+</html>

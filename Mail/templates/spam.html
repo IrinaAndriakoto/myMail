@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Spam</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='bootstrap.min.css') }}">
+  
+</head>
+<body>
+    <h1>Spam :</h1>
+    <ul>
+        {% for email in spam_emails %}
+            <li>
+                {{ email[1] }}
+                <a href="{{ url_for('enlever_spam', email_id=email[0]) }}" onclick="return confirm('Voulez-vous vraiment enlever cet e-mail de la liste des spams ?')">Enlever le spam</a>
+            </li>
+        {% endfor %}
+    </ul>
+    
+    <a href="{{ url_for('boite_de_reception') }}">Retourner a la boite de reception</a>
+</body>
+</html>

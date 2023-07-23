@@ -1,0 +1,66 @@
+.header{
+    margin-top: 25px;
+    text-align: center;
+    font-size: 25px;
+    /* font-family: 'Times New Roman', Times, serif; */
+    margin-left: 650px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+}
+
+/* h1 {
+    color: #333;
+} */
+
+.inp{
+    width: 500px;
+    height: 100px;
+    margin-left: 100px;
+}
+.dest{
+    width: 500px;
+    height: 30px;
+    margin-left: 100px;
+
+}
+.btn{
+    width: 250px;
+    height: 30px;
+    margin-left: 230px;
+}
+
+.send,.sent,.spam{
+    /* display: flex;
+    flex-direction: column; */
+    background-color: burlywood;
+    width: 700px;
+    text-align: center;
+    border-radius: 10px;
+}
+/* .send{ */
+    /* background-color: chocolate; */
+    /* float: right;
+    margin-top: 20px;
+    margin-right: 50px;
+    padding: 50px;  */
+/* } */
+.box{
+    background-color: rgb(21, 90, 42);
+     margin-top: 40px;
+     margin-right: 50px;
+     width: 600px;
+    color:antiquewhite;
+}
+
+/* .spam{
+    background-color: red;
+}
+.sent{
+    background-color: violet;
+} */
+
+
+    
